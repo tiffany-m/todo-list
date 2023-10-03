@@ -1,4 +1,5 @@
 import './style.css';
+import './myFont.ttf'
 import Icon from './images/icon.png';
 
 console.log("working")

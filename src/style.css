@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./myFont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
 .hello {
     color: red;
+    font-size: 3rem;
+    font-family: 'MyFont';
 }
 
 img {
