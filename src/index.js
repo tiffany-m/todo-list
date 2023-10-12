@@ -29,3 +29,11 @@ if (indexFromStorage && !isNaN(indexFromStorage)) {
 } else {
     index = 0;
 }
+
+function ToDoProject(title, description, dueDate, priority, index) {
+    this.title = title;
+    this.description = description;
+    this.dueDate = dueDate;
+    this.priority = priority;
+    this.index = index;
+}
