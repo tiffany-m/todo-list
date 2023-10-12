@@ -11,6 +11,7 @@ export const form = {
     dueDate: document.getElementById("due-date"),
     priority: document.getElementById("priority")
 }
+export let selectedPriority = "";
 let index;
 const indexFromStorage = localStorage.getItem("index");
 
