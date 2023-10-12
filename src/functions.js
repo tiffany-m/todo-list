@@ -1,17 +1,23 @@
+const priorityBtnYellow = document.getElementById('low-priority-btn');
+const priorityBtnOrange = document.getElementById('medium-priority-btn');
+const priorityBtnRed = document.getElementById('high-priority-btn');
+const toDoProjectContainer = document.getElementById("to-do-project-container");
+
 export function findValueSelectedRadioBtn() {
-    if (priorityBtn.yellow.checked) {
-        selectedPriority = priorityBtn.yellow.value;
-        return selectedPriority;
-    } else if (priorityBtn.orange.checked) {
-        selectedPriority = priorityBtn.orange.value;
-        return selectedPriority;
+    let selectedPriority = "";
+
+    if (priorityBtnYellow.checked) {
+        selectedPriority = priorityBtnYellow.value;
+    } else if (priorityBtnOrange.checked) {
+        selectedPriority = priorityBtnOrange.value;
     } else {
-        selectedPriority = "HIGH";
-        return selectedPriority;
+        selectedPriority = priorityBtnRed.value;
     }
+
+    return selectedPriority;
 }
 
-export function clearModal() {
+export function clearModal(form) {
     form.title.value = "";
     form.description.value = "";
     form.dueDate.value = "";

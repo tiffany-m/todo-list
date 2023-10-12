@@ -1,22 +1,16 @@
-import { findValueSelectedRadioBtn, clearModal, addNewProjectToDisplay } from "./functions";
+import './style.css';
+import { findValueSelectedRadioBtn, clearModal, addNewProjectToDisplay } from './functions';
 
-const toDoProjectContainer = document.getElementById("to-do-project-container");
 const addNewProjectBtn = document.getElementById("add-new-project-btn");
 const clearBtn = document.getElementById("clear-btn");
 const submitBtn = document.getElementById("submit-btn");
 const closeModalBtn = document.getElementById("close-btn");
-const form = {
+export const form = {
     title: document.getElementById("title"),
     description: document.getElementById("description"),
     dueDate: document.getElementById("due-date"),
     priority: document.getElementById("priority")
 }
-const priorityBtn = {
-    yellow: document.getElementById('low-priority-btn'),
-    orange: document.getElementById('medium-priority-btn'),
-    red: document.getElementById('high-priority-btn')
-}
-let selectedPriority = "";
 let index;
 const indexFromStorage = localStorage.getItem("index");
 
@@ -64,14 +58,14 @@ submitBtn.addEventListener("click", (e) => {
     index = parseInt(localStorage.getItem("index"), 10);
     console.log(`index added: ${index}`)
 
-    findValueSelectedRadioBtn();
+    let selectedPriority = findValueSelectedRadioBtn();
 
     let newProject = new ToDoProject(form.title.value, form.description.value, form.dueDate.value, selectedPriority, index);
     localStorageProjects.push(newProject);
     addNewProjectToDisplay(newProject);
 
     localStorage.setItem("myProjects", JSON.stringify(localStorageProjects));
-    clearModal();
+    clearModal(form);
 });
 
 // loads projects saved to local storage when page is refreshed
