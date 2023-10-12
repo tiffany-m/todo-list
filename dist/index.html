@@ -2,11 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>To Do Projects</title>
 <script defer src="main.js"></script></head>
 <body>
-    <div class="hello">Hello</div>
+    <div id="to-do-project-container">
+        <button id="add-new-project-btn">New Project</button>
+        <button id="clear-btn">Clear All Projects</button>
+        <dialog id="modal">
+            <form action="/" method="GET">
+                <!-- add labels and required -->
+                <input type="text" id="title" placeholder="Title" minlength="1" maxlength="30">
+                <input type="text" id="description" placeholder="Description" minlength="1">
+                <input type="date" id="due-date">
+                <div>
+                    Priority
+                    <input type="radio" id="low-priority-btn" name="priority-btn" value="LOW">
+                    <label for="low-priority-btn" class="priority-color-btn yellow-color">low</label>
+                    <input type="radio" id="medium-priority-btn" name="priority-btn" value="MEDIUM">
+                    <label for="medium-priority-btn" class="priority-color-btn orange-color">medium</label>
+                    <input type="radio" id="high-priority-btn" name="priority-btn" value="HIGH">
+                    <label for="high-priority-btn" class="priority-color-btn red-color">high</label>
+                </div>
+                <input type="submit" id="submit-btn" class="modal-btn" value="Submit">
+                <button id="close-btn" class="modal-btn">Close</button>
+            </form>
+        </dialog>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
