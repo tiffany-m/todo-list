@@ -5,13 +5,13 @@ const addNewProjectBtn = document.getElementById("add-new-project-btn");
 const clearBtn = document.getElementById("clear-btn");
 const submitBtn = document.getElementById("submit-btn");
 const closeModalBtn = document.getElementById("close-btn");
-export const form = {
+const form = {
     title: document.getElementById("title"),
     description: document.getElementById("description"),
     dueDate: document.getElementById("due-date"),
     priority: document.getElementById("priority")
 }
-export let selectedPriority = "";
+let selectedPriority = "";
 let index;
 const indexFromStorage = localStorage.getItem("index");
 
@@ -48,6 +48,7 @@ closeModalBtn.addEventListener("click", (e) => {
     e.preventDefault(); // prevents modal (dialog element in HTML) from clearing projects when clicked
     modal.close();
 })
+
 
 // new project added to display and local storage
 submitBtn.addEventListener("click", (e) => {

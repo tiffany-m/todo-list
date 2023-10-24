@@ -1,3 +1,5 @@
+import { format, parseISO } from "date-fns";
+
 const priorityBtnYellow = document.getElementById('low-priority-btn');
 const priorityBtnOrange = document.getElementById('medium-priority-btn');
 const priorityBtnRed = document.getElementById('high-priority-btn');
@@ -27,11 +29,18 @@ export function clearModal(form) {
 }
 
 export function addNewProjectToDisplay(project) {
+    console.log(project.dueDate)
+
+    // date is a string and must be parsed for format() to work
+    let dateFormatted = format(parseISO(project.dueDate), 'MM/dd/yyyy');
+
+    console.log(dateFormatted)
+
     let projectElement = document.createElement("div");
     projectElement.insertAdjacentHTML('beforeend', `
         <div>${project.title}</div>
         <div>${project.description}</div>
-        <div>${project.dueDate}</div>
+        <div>${dateFormatted}</div>
         <span class="priority-color-project">${project.priority}</span>
         <button class="delete-btn btn">Delete</button>`);
 
