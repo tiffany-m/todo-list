@@ -33,7 +33,6 @@ export function addNewProjectToDisplay(project) {
         <div>${project.description}</div>
         <div>${project.dueDate}</div>
         <span class="priority-color-project">${project.priority}</span>
-        <button class="edit-btn btn">Edit</button>
         <button class="delete-btn btn">Delete</button>`);
 
     // change priority element to proper color for new project
