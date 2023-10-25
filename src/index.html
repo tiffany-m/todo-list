@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Italianno&family=M+PLUS+1p&family=Nova+Round&family=Nova+Square&display=swap"
+        rel="stylesheet">
     <title>To Do Projects</title>
 </head>
 <body>
     <div id="to-do-project-container">
-        <button id="add-new-project-btn">New Project</button>
-        <button id="clear-btn">Clear All Projects</button>
+        <header>
+            <div id="header-title">Projects</div>
+            <div id="header-btns">
+                <button id="add-new-project-btn" class="project-btn btn">New Project</button>
+                <button id="clear-btn" class="project-btn btn">Clear Projects</button>                
+            </div>
+        </header>
         <dialog id="modal">
             <form action="/" method="GET">
                 <!-- add labels and required -->
