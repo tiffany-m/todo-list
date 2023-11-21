@@ -3,7 +3,7 @@ import { format, parseISO } from "date-fns";
 const priorityBtnYellow = document.getElementById('low-priority-btn');
 const priorityBtnOrange = document.getElementById('medium-priority-btn');
 const priorityBtnRed = document.getElementById('high-priority-btn');
-const toDoProjectContainer = document.getElementById("to-do-project-container");
+const projectContainer = document.getElementById("project-container");
 
 export function findValueSelectedRadioBtn() {
     let selectedPriority = "";
@@ -55,5 +55,5 @@ export function addNewProjectToDisplay(project) {
         priorityColorElement.className += " red-color";
     }
 
-    toDoProjectContainer.appendChild(projectElement);
+    projectContainer.appendChild(projectElement);
 }

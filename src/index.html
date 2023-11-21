@@ -11,22 +11,27 @@
     <title>To Do Projects</title>
 </head>
 <body>
-    <div id="to-do-project-container">
+    <div id="container">
         <header>
             <div id="header-title">Projects</div>
+            <img src="/src/images/projects.png" alt="Projects Icon">
             <div id="header-btns">
                 <button id="add-new-project-btn" class="project-btn btn">New Project</button>
                 <button id="clear-btn" class="project-btn btn">Clear Projects</button>                
             </div>
         </header>
+        <div id="project-container"></div>
         <dialog id="modal">
             <form action="/" method="GET">
                 <!-- add labels and required -->
                 <input type="text" id="title" placeholder="Title" minlength="1" maxlength="30">
-                <input type="text" id="description" placeholder="Description" minlength="1">
-                <input type="date" id="due-date">
-                <div>
-                    Priority
+                <textarea id="description" placeholder="Description" rows="5" cols="35"></textarea>
+                <div id="due-date-container">
+                    <span class="due-date-title">Due Date</span>
+                    <input type="date" id="due-date">
+                </div>
+                <div id="priority-container">
+                    <span class="priority-title">Priority</span>
                     <input type="radio" id="low-priority-btn" name="priority-btn" value="LOW">
                     <label for="low-priority-btn" class="priority-color-btn yellow-color">low</label>
                     <input type="radio" id="medium-priority-btn" name="priority-btn" value="MEDIUM">
@@ -34,8 +39,12 @@
                     <input type="radio" id="high-priority-btn" name="priority-btn" value="HIGH">
                     <label for="high-priority-btn" class="priority-color-btn red-color">high</label>
                 </div>
-                <input type="submit" id="submit-btn" class="modal-btn" value="Submit">
-                <button id="close-btn" class="modal-btn">Close</button>
+                <div id="modal-btn-container">
+                    <input type="submit" id="submit-btn" class="modal-btn btn" value="Submit">
+                    <button id="close-btn" class="modal-btn btn">Close</button>
+                    <button class="modal-btn btn delete">Delete</button>
+                </div>
+
             </form>
         </dialog>
     </div>

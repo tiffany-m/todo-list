@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'M PLUS 1p';
 }
 
 .btn:active {
@@ -10,10 +11,11 @@ body {
     transform: scale(0.95);
 }
 
-#to-do-project-container {
+#container {
     background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
 }
 
+/* Header --------------------------------------------------------------------------------------- */
 header {
     display: flex;
     align-items: center;
@@ -22,9 +24,12 @@ header {
 
 #header-title {
     font-size: 5rem;
-    font-family: 'M PLUS 1p';
     font-weight: bold;
     margin: 2rem;
+}
+
+img {
+    width: 100px;
 }
 
 #header-btns {
@@ -42,9 +47,27 @@ header {
     box-shadow: 2px 1px 5px rgb(46, 46, 46);
 }
 
+/* Project Container --------------------------------------------------------------------------- */
+
+/* Project ---------------------------------------------------------------------------------------- */
+
+/* Modal -------------------------------------------------------------------------------------- */
 #modal::backdrop {
     background: gray;
     opacity: .5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: .5rem;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+    padding: .5rem;
 }
 
 input[type="radio"] {
@@ -57,9 +80,19 @@ input[type="radio"] {
     opacity: 0;
 }
 
+.due-date-title, .priority-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1.5rem;
+}
+
+#due-date-container, #priority-container {
+    display: flex;
+    align-items: center;
+}
+
 .priority-color-btn,
 .priority-color-project {
-    display: inline-block;
     margin: 0 1.5rem 0 -5px;
     padding: .5rem 1rem;
     border: 1px solid black;
@@ -67,9 +100,6 @@ input[type="radio"] {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 700;
-    cursor: pointer;
-    -webkit-transition: all .3s;
-    transition: all .3s;
 }
 
 .yellow-color {
@@ -82,4 +112,21 @@ input[type="radio"] {
 
 .red-color {
     background-color: red;
+}
+
+#modal-btn-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.modal-btn{
+    padding: .5rem 1rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.delete {
+    margin-left: auto;
 }
