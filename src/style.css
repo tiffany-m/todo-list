@@ -70,6 +70,11 @@ input[type="date"] {
     padding: .5rem;
 }
 
+input::placeholder, textarea::placeholder {
+    font-family: 'M PLUS 1p';
+    font-size: 1rem;
+}
+
 input[type="radio"] {
     position: relative;
     left: 2.2rem;
@@ -116,6 +121,7 @@ input[type="radio"] {
 
 #modal-btn-container {
     display: flex;
+    justify-content: flex-end;
     gap: 1.5rem;
 }
 
@@ -125,8 +131,4 @@ input[type="radio"] {
     border-radius: 3px;
     font-size: 1rem;
     font-weight: 700;
-}
-
-.delete {
-    margin-left: auto;
 }

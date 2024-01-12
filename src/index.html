@@ -22,29 +22,27 @@
         </header>
         <div id="project-container"></div>
         <dialog id="modal">
-            <form action="/" method="GET">
+            <form action="/" method="POST">
                 <!-- add labels and required -->
                 <input type="text" id="title" placeholder="Title" minlength="1" maxlength="30">
                 <textarea id="description" placeholder="Description" rows="5" cols="35"></textarea>
                 <div id="due-date-container">
                     <span class="due-date-title">Due Date</span>
-                    <input type="date" id="due-date">
+                    <input type="date" id="due-date" required/>
                 </div>
                 <div id="priority-container">
                     <span class="priority-title">Priority</span>
                     <input type="radio" id="low-priority-btn" name="priority-btn" value="LOW">
-                    <label for="low-priority-btn" class="priority-color-btn yellow-color">low</label>
+                    <label for="low-priority-btn" class="btn priority-color-btn yellow-color">low</label>
                     <input type="radio" id="medium-priority-btn" name="priority-btn" value="MEDIUM">
-                    <label for="medium-priority-btn" class="priority-color-btn orange-color">medium</label>
+                    <label for="medium-priority-btn" class="btn priority-color-btn orange-color">medium</label>
                     <input type="radio" id="high-priority-btn" name="priority-btn" value="HIGH">
-                    <label for="high-priority-btn" class="priority-color-btn red-color">high</label>
+                    <label for="high-priority-btn" class="btn priority-color-btn red-color">high</label>
                 </div>
                 <div id="modal-btn-container">
                     <input type="submit" id="submit-btn" class="modal-btn btn" value="Submit">
                     <button id="close-btn" class="modal-btn btn">Close</button>
-                    <button class="modal-btn btn delete">Delete</button>
                 </div>
-
             </form>
         </dialog>
     </div>
