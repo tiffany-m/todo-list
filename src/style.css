@@ -46,10 +46,32 @@ img {
 
 /* Project Container --------------------------------------------------------------------------- */
 #project-container {
-    margin: 2rem;
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    row-gap: 4rem;
+    justify-items: center;
 }
 
 /* Project ---------------------------------------------------------------------------------------- */
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: black solid 1px;
+    height: 335px;
+    width: 350px;
+}
+
+.project-title, .project-description, .project-date, .project-priority {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.delete-btn {
+    margin-top: auto;
+    width: 100%;
+}
 
 /* Modal -------------------------------------------------------------------------------------- */
 #modal::backdrop {
@@ -98,7 +120,7 @@ input[type="radio"] {
 
 .priority-color-btn,
 .priority-color-project {
-    margin: 0 1.5rem 0 -5px;
+    margin: 0 1.5rem 0 .5rem;
     padding: .5rem 1rem;
     border: 1px solid black;
     border-radius: 3px;
@@ -125,7 +147,7 @@ input[type="radio"] {
     gap: 1.5rem;
 }
 
-.modal-btn{
+.modal-btn, .delete-btn{
     padding: .5rem 1rem;
     border: 1px solid black;
     border-radius: 3px;

@@ -37,11 +37,12 @@ export function addNewProjectToDisplay(project) {
     console.log(dateFormatted)
 
     let projectElement = document.createElement("div");
+    projectElement.classList.add("project")
     projectElement.insertAdjacentHTML('beforeend', `
-        <div>${project.title}</div>
-        <div>${project.description}</div>
-        <div>${dateFormatted}</div>
-        <span class="priority-color-project">${project.priority}</span>
+        <div><span class="project-title">Title: </span>${project.title}</div>
+        <div><span class="project-description">Description: </span></br>${project.description}</div>
+        <div><span class="project-date">Due Date: </span>${dateFormatted}</div>
+        <div><span class="project-priority">Project Priority: </span><span class="project-priority priority-color-project">${project.priority}</span></div>
         <button class="delete-btn btn">Delete</button>`);
 
     // change priority element to proper color for new project
