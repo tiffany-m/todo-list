@@ -11,12 +11,9 @@ body {
     transform: scale(0.95);
 }
 
-#container {
-    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
-}
-
 /* Header --------------------------------------------------------------------------------------- */
 header {
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
     display: flex;
     align-items: center;
     width: 100%;
